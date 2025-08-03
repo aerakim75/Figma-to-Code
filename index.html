@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Boutique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fresca&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&display=swap" rel="stylesheet">
+
+
+  <style>
+    .font-fredoka {
+      font-family: 'Fredoka One', cursive;
+    }
+  </style>
+   <style>
+    .font-fredoka {
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 400; /* Regular */
+    }
+  </style>
+  <style>
+    .font-italianno {
+      font-family: 'Italianno', cursive;
+      font-weight: 400; /* Regular is the only available weight */
+    }
+  </style>
+   <style>
+    .font-fraunces {
+      font-family: 'Fraunces', serif;
+      font-weight: 400; /* Regular */
+    }
+  </style>
+  <style>
+    .font-fresca {
+      font-family: 'Fresca', sans-serif;
+      font-weight: 400; /* Regular */
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-white">
+    <!-- Navigation Header -->
+    <header class="bg-[#FDF6F0]">
+        <nav class="py-10 px-4 sm:px-6 lg:px-20">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                   
+                      
+                        <div>
+                           <img class="h-[80px]" src="/image 2.svg" />
+                        </div>
+                
+                </div>
+
+                <!-- Desktop Navigation Menu -->
+                <div class="hidden lg:flex items-center space-x-5">
+                    <a href="#"
+                        class="text-gray-800 hover:text-gray-600 font-semibold text-lg tracking-wide transition-colors">HOME</a>
+                    <a href="#"
+                        class="text-gray-800 hover:text-gray-600 font-semibold text-lg tracking-wide transition-colors">ABOUT
+                        US</a>
+                    <a href="#"
+                        class="text-gray-800 hover:text-gray-600 font-semibold text-lg tracking-wide transition-colors">SHOP</a>
+                    <a href="#"
+                        class="text-gray-800 hover:text-gray-600 font-semibold text-lg tracking-wide transition-colors">OCCASION</a>
+                    <a href="#"
+                        class="text-gray-800 hover:text-gray-600 font-semibold text-lg tracking-wide transition-colors">CONTACT</a>
+                </div>
+
+                <!-- Search and Cart Icons -->
+                <div class=" bg-white py-1 px-2  flex items-center space-x-2">
+                    <button class="text-gray-800 transition-colors" aria-label="Search">
+                        <i class="fas fa-search text-md"></i>
+                    </button>
+                    <button class="text-gray-800 hover:text-gray-600 transition-colors" aria-label="Shopping Cart">
+                        <i class="fas fa-shopping-bag text-lg"></i>
+                    </button>
+                    <!-- Mobile Menu Button -->
+                    <button class="lg:hidden text-gray-800 hover:text-gray-600 transition-colors"
+                        id="mobile-menu-button" aria-label="Menu">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div class="lg:hidden border-t border-gray-200 py-4 hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="#"
+                        class="text-gray-800 hover:text-gray-600 font-medium text-sm tracking-wide transition-colors">HOME</a>
+                    <a href="#"
+                        class="text-gray-800 hover:text-gray-600 font-medium text-sm tracking-wide transition-colors">ABOUT
+                        US</a>
+                    <a href="#"
+                        class="text-gray-800 hover:text-gray-600 font-medium text-sm tracking-wide transition-colors">SHOP</a>
+                    <a href="#"
+                        class="text-gray-800 hover:text-gray-600 font-medium text-sm tracking-wide transition-colors">OCCASION</a>
+                    <a href="#"
+                        class="text-gray-800 hover:text-gray-600 font-medium text-sm tracking-wide transition-colors">CONTACT</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-[#FDF6F0] min-h-screen flex items-center">
+        <div class=" px-10 sm:px-15 lg:px-20 ">
+            <div class="flex justify-between items-center gap-20">
+                <!-- Left Content -->
+                <div class="text-center flex flex-col justify-start ">
+                    <h1  class="text-7xl font-fredoka one font-extrabold text-gray-900 mb-16 leading-tight">
+                        Let Your Emotions <br />BLOOM
+                    </h1>
+
+                    <p class="font-fresca text-start text-2xl text-gray-800 mb-8 lg:mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                        Floral gifts for love, gratitude, and celebration.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <button
+                            class="text-2xl border-b-8 border-[#FF9D9D] bg-[#FFD8E4] text-gray-900 font-bold py-4 px-8 rounded-full transition-all duration-300  shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            SHOP NOW
+                        </button>
+                        <button
+                            class="text-2xl border-b-8 border-[#FF9D9D] bg-[#FFD8E4] text-gray-900 font-bold py-4 px-8  rounded-full transition-all duration-300  shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            CREATE YOUR OWN BOUQUET
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="flex justify-center ">
+                   
+                        <img src="/Rectangle 3.svg"
+                            alt="Beautiful purple and white flower bouquet in white ceramic vase"
+                            class="" loading="eager" />
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#FDF6F0] pb-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                <!-- Image Container -->
+                <div class="w-full   lg:w-1/2">
+                    <div class="rounded-2xl overflow-hidden ">
+                        <img src="/Rectangle 4.svg"
+                            alt="Interior of Bloom Boutique flower shop showing colorful flowers and plants"
+                            class="w-full  h-auto object-cover">
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <h2
+                        class="text-3xl font-fredoka md:text-4xl text-center font-medium underline text-[#510342] mb-6 tracking-wide">
+                        ABOUT US
+                    </h2>
+                    <p class="text-3xl font-fredoka text-[#6D103E] text-center leading-tight font-medium">
+                        "At Bloom Boutique, we are <br />passionate about making your<br /> moments bloom. Every bouquet
+                        is <br />handcrafted with love and care,<br /> bringing beauty and joy to your<br /> life's
+                        special occasions."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#FFD8D8] py-16 px-4">
+        <div class="">
+            <!-- Section Title -->
+            <h2 class="text-3xl font-fredoka :text-4xl font-medium underline text-[#510342] text-center mb-12 tracking-wide">
+                BLOOMING BESTSELLERS
+            </h2>
+
+            <!-- Products Grid -->
+            <div class="flex gap-10 justify-center items-center">
+
+                <!-- Chrysanthemum -->
+                <div class="flex flex-col justify-center items-center gap-5">
+                    <div
+                        class="bg-white bg-opacity-90 rounded-full p-3 w-68 h-[420px] flex flex-col items-center justify-between ">
+                        <div class="flex flex-col border-2 border-[#360707] rounded-full  ">
+                            <div class="flex-1  flex items-center justify-center ">
+                                <img src="/image 3.svg" alt="Pink Chrysanthemum"
+                                    class="w-full h-[250px] object-cover rounded-full">
+                            </div>
+                            <div class="text-center mb-4 p-9">
+                                <h3 class="font-fraunces text-lg font-medium text-[#600C0C] mb-1">Chrysanthemum</h3>
+                                <p class="font-fraunces text-[#600C0C] font-medium">Rs.399</p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <button
+                        class="bg-[#EE9898] text-gray-800 font-bold py-2 px-6 rounded-full transition-colors duration-200">
+                        BUY
+                    </button>
+                </div>
+
+                <!-- White Lily -->
+                <div class="flex flex-col justify-center items-center gap-5">
+                    <div
+                        class="bg-white bg-opacity-90 rounded-full p-3 w-68 h-[420px] flex flex-col items-center justify-between ">
+                        <div class="flex flex-col border-2 border-[#360707] rounded-full ">
+                            <div class=" flex items-center justify-center px-2">
+                                <img src="/image 5.svg" alt="Pink Chrysanthemum"
+                                    class="w-full h-[250px] px-6 object-cover rounded-full">
+                            </div>
+                            <div class="text-center mb-4 p-9">
+                                <h3 class="font-fraunces text-lg font-medium text-[#600C0C] mb-1">White Lily</h3>
+                                <p class="font-fraunces text-[#600C0C] font-medium">Rs.455</p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <button
+                        class="bg-[#EE9898] text-gray-800 font-bold py-2 px-6 rounded-full transition-colors duration-200">
+                        BUY
+                    </button>
+                </div>
+
+                <!-- Yellow Tulip -->
+                <div class="flex flex-col justify-center items-center gap-5">
+                    <div
+                        class="bg-white bg-opacity-90 rounded-full p-3 w-68 h-[420px] flex flex-col items-center justify-between ">
+                        <div class="flex flex-col border-2 border-[#360707] rounded-full ">
+                            <div class="flex-1  flex items-center justify-center ">
+                                <img src="/image 6.svg" alt="Pink Chrysanthemum"
+                                    class="w-full h-[250px] object-cover px-3 rounded-full">
+                            </div>
+                            <div class="text-center mb-4 p-9">
+                                <h3 class="font-fraunces text-lg font-medium text-[#600C0C] mb-1">Yellow Tulip</h3>
+                                <p class="font-fraunces text-[#600C0C] font-medium">Rs.449</p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <button
+                        class="bg-[#EE9898] text-gray-800 font-bold py-2 px-6 rounded-full transition-colors duration-200">
+                        BUY
+                    </button>
+                </div>
+
+                <!-- Red Roses -->
+                <div class="flex flex-col justify-center items-center gap-5">
+                    <div
+                        class="bg-white bg-opacity-90 rounded-full p-3 w-68 h-[420px] flex flex-col items-center justify-between ">
+                        <div class="flex flex-col border-2 border-[#360707] rounded-full  ">
+                            <div class="flex-1  flex items-center justify-center mt-2 ">
+                                <img src="/image 7.svg" alt="Pink Chrysanthemum"
+                                    class="w-full h-[250px] object-cover rounded-full">
+                            </div>
+                            <div class="text-center mb-4 p-8">
+                                <h3 class="font-fraunces text-lg font-medium text-[#600C0C] mb-1">Red Roses</h3>
+                                <p class="font-fraunces text-[#600C0C] font-medium">Rs.550</p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <button
+                        class="bg-[#EE9898] text-gray-800 font-bold py-2 px-6 rounded-full transition-colors duration-200">
+                        BUY
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#FDF6F0] py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Title -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-fredoka md:text-4xl font-medium underline text-[#510342] text-center mb-12 tracking-wide">
+                    FLOWERS FOR EVERY OCCASION
+                </h2>
+
+            </div>
+
+            <!-- Occasions Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-5 gap-6">
+
+                <!-- Happy Birthday -->
+                <div class="relative group overflow-hidden  transition-shadow duration-300">
+                    <img src="/Rectangle 8.svg" alt="Pink roses for Happy Birthday"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+
+                </div>
+
+                <!-- Wedding Congratulations -->
+                <div class="relative group overflow-hidden  transition-shadow duration-300">
+                    <img src="/Rectangle 10.svg" alt="Purple and white flowers for wedding"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+
+                </div>
+
+                <!-- Graduation -->
+                <div class="relative group overflow-hidden  transition-shadow duration-300">
+                    <img src="/Rectangle 11.svg" alt="Peach flowers with teddy bear for graduation"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+
+                </div>
+
+                <!-- Wedding Anniversary -->
+                <div class="relative group overflow-hidden  transition-shadow duration-300">
+                    <img src="/Rectangle 9.svg" alt="Pink flowers for wedding anniversary"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+
+                </div>
+
+                <!-- General Bouquet -->
+                <div class="relative group overflow-hidden  transition-shadow duration-300">
+                    <img src="/Rectangle 12.svg" alt="Elegant pink roses bouquet"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+
+                </div>
+
+                <!-- Valentine's Day -->
+                <div class="relative group overflow-hidden  transition-shadow duration-300">
+                    <img src="/Rectangle 13 (1).svg" alt="Pink tulips for Valentine's Day"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#FDF6F0] px-4">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Title -->
+            <div class="text-center pb-20">
+                <div class="text-center mb-12">
+                    <h2
+                        class="text-3xl font-fredoka md:text-4xl font-medium underline text-[#510342] text-center mb-12 tracking-wide">
+                        BLOOMING REVIEWS
+                    </h2>
+
+
+                </div>
+
+                <!-- Reviews Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-rose-100 p-6 rounded-lg shadow-sm">
+                        <p class="font-italianno text-[#600C0C] text-xl text-center leading-relaxed mb-4">
+                            "Timely delivery, beautiful packaging, and fresh flowers - perfect! My surprise gift was a
+                            huge success, all thanks to you!"
+                        </p>
+                        <p class="font-italianno text-[#AC3D3D] text-xl text-center">
+                            - Emma Collins
+                        </p>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-rose-100 p-6 rounded-lg shadow-sm">
+                        <p class="font-italianno text-[#600C0C]  text-xl text-center leading-relaxed mb-4">
+                            "Bloom Boutique is now my go-to for every occasion! I ordered from abroad and it was
+                            delivered exactly as promised!"
+                        </p>
+                        <p class="font-italianno text-[#AC3D3D] text-xl  text-center">
+                            - Meera Kapoor
+                        </p>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-rose-100 p-6 rounded-lg shadow-sm">
+                        <p class="font-italianno text-[#600C0C] text-xl text-center leading-relaxed mb-4">
+                            "The fragrance, the colors, the care - everything was perfect. They even added a handwritten
+                            note. Such a lovely gesture."
+                        </p>
+                        <p class="font-italianno text-[#AC3D3D] text-xl  text-center">
+                            - Teo Choi
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#FFDADA] py-10 px-10">
+        <div class="">
+            <div class="flex justify-center items-center  gap-28">
+
+                <!-- Company Info -->
+                <div class="">
+                    <div class="flex items-center  mb-6">
+                         <div>
+                           <img class="h-[80px]" src="/image 2.svg" />
+                        </div>
+                    </div>
+
+                    <div class="space-y-1 text-[#9C3636]">
+                        <div class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 mt-1 text-rose-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg>
+                            <span class="text-xl">123 Floral Avenue,<br>Mumbai</span>
+                        </div>
+
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-rose-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                            </svg>
+                            <span class="text-xl">+92 10-1234-5678</span>
+                        </div>
+
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-rose-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                            </svg>
+                            <span class="text-xl">Mon-Sat: 9AM-8PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" w-[2px] h-[250px]  bg-[#7F1D1D]"></div>
+
+                <!-- Quick Links -->
+                <div class="text-center mb-10">
+                    <h4 class="text-2xl font-semibold text-[#9C3636] mb-2">Quick Links</h4>
+                    <nav class="space-y-2">
+                        <a href="#" class="block text-[#9C3636] text-xl hover:text-pink-900 transition-colors">Home</a>
+                        <a href="#" class="block text-[#9C3636] text-xl hover:text-pink-900 transition-colors">About
+                            Us</a>
+                        <a href="#" class="block text-[#9C3636] text-xl hover:text-pink-900 transition-colors">Shop</a>
+                        <a href="#"
+                            class="block text-[#9C3636] text-xl hover:text-pink-900 transition-colors">Occasion</a>
+                    </nav>
+                </div>
+                <div class=" w-[2px] h-[250px] bg-[#7F1D1D]"></div>
+                <!-- Contact Form -->
+                <div>
+                    <h4 class="text-2xl text-center font-semibold text-[#9C3636] mb-7">CONTACT US</h4>
+                    <form class="space-y-1">
+                        <div class="flex gap-3">
+                            <label class=" text-[#841C1C] font-bold text-xl mb-2">NAME :</label>
+                            <input type="text" class=" px-1 h-[25px] ml-6 bg-[#DE8787] border border-[#DE8787]  ">
+                        </div>
+
+                        <div class="flex gap-3">
+                            <label class=" text-[#841C1C] font-bold text-xl mb-2">EMAIL-ID :</label>
+                            <input type="email" class=" px-1 h-[25px]  bg-[#DE8787] border border-[#DE8787]  ">
+                        </div>
+
+                        <div class="flex gap-3">
+                            <label class=" text-[#841C1C] font-bold text-xl mb-2">MESSAGE :</label>
+                            <input type="text" class=" px-1 h-[25px]   bg-[#DE8787] border border-[#DE8787]  ">
+
+                        </div>
+
+
+                    </form>
+                    <button type="submit"
+                        class="bg-[#D9D9D9] rounded-2xl mt-8 ml-20 flex justify-center items-center  text-[#5D3737] font-bold text-xl py-2 px-6  transition-colors duration-200">
+                        SEND
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright -->
+    <div class="bg-[#854545] my-5 font-bold text-xl   text-white text-center py-3">
+        <p>&copy; 2025 Bloom Boutique. All rights reserved.</p>
+    </div>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = this.querySelector('i');
+
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+
+</html>

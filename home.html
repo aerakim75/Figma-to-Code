@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Boutique</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fresca&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom Colors */
+        .bg-cream { background-color: #FDF6F0; }
+        .bg-pink-light { background-color: #FFD8E4; }
+        .bg-pink-medium { background-color: #FFD8D8; }
+        .bg-pink-footer { background-color: #FFDADA; }
+        .bg-pink-button { background-color: #EE9898; }
+        .bg-pink-input { background-color: #DE8787; }
+        .bg-gray-button { background-color: #D9D9D9; }
+        .bg-brown-footer { background-color: #854545; }
+        .bg-rose-review { background-color: rgb(254 242 242); }
+        
+        .text-purple-dark { color: #510342; }
+        .text-purple-medium { color: #6D103E; }
+        .text-brown-dark { color: #600C0C; }
+        .text-brown-medium { color: #AC3D3D; }
+        .text-brown-light { color: #9C3636; }
+        .text-brown-footer { color: #841C1C; }
+        .text-brown-button { color: #5D3737; }
+        .text-brown-divider { color: #7F1D1D; }
+        
+        .border-pink { border-color: #FF9D9D !important; }
+        .border-brown { border-color: #360707 !important; }
+        .border-brown-divider { border-color: #7F1D1D !important; }
+        
+        /* Custom Fonts */
+        .font-fredoka { font-family: 'Fredoka', sans-serif; }
+        .font-fredoka-one { font-family: 'Fredoka One', cursive; }
+        .font-italianno { font-family: 'Italianno', cursive; }
+        .font-fraunces { font-family: 'Fraunces', serif; }
+        .font-fresca { font-family: 'Fresca', sans-serif; }
+        
+        /* Custom Styles */
+        .hero-title { 
+            font-size: 1.5rem; 
+            /* line-height: 1.1;  */
+            font-weight: 300;
+        }
+        
+        .hero-subtitle { 
+            font-size: 1.5rem; 
+            line-height: 1.6; 
+        }
+        
+        .cta-button {
+            font-size: 1.5rem;
+            border-bottom: 8px solid #FF9D9D;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+        
+        .product-card {
+            width: 272px;
+            height: 420px;
+        }
+        .rounded-150 {
+             border-radius: 150px;
+         }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        
+        .occasion-image {
+            height: 256px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .occasion-card:hover .occasion-image {
+            transform: scale(1.05);
+        }
+        
+        .divider-line {
+            width: 2px;
+            height: 250px;
+            background-color: #7F1D1D;
+        }
+        
+        .nav-height { height: 64px; }
+        
+        @media (min-width: 768px) {
+            .nav-height { height: 80px; }
+            .hero-title { font-size: 6rem; }
+        }
+        
+        @media (max-width: 991px) {
+            .hero-title { font-size: 3rem; }
+            .hero-subtitle { font-size: 1.25rem; }
+            .cta-button { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <!-- Navigation Header -->
+    <header class="bg-cream">
+        <nav class="py-5">
+            <div class="container-fluid px-4 px-lg-5">
+                <div class="d-flex justify-content-between align-items-center nav-height">
+                    <!-- Logo -->
+                    <div class="d-flex align-items-center">
+                        <img src="/image 2.svg" alt="Bloom Boutique Logo" style="height: 80px;" />
+                    </div>
+                    
+                    <!-- Desktop Navigation Menu -->
+                    <div class="d-none d-lg-flex align-items-center">
+                        <a href="#" class="text-dark text-decoration-none fw-semibold fs-5 me-4 text-uppercase" style="letter-spacing: 0.05em;">Home</a>
+                        <a href="#" class="text-dark text-decoration-none fw-semibold fs-5 me-4 text-uppercase" style="letter-spacing: 0.05em;">About Us</a>
+                        <a href="#" class="text-dark text-decoration-none fw-semibold fs-5 me-4 text-uppercase" style="letter-spacing: 0.05em;">Shop</a>
+                        <a href="#" class="text-dark text-decoration-none fw-semibold fs-5 me-4 text-uppercase" style="letter-spacing: 0.05em;">Occasion</a>
+                        <a href="#" class="text-dark text-decoration-none fw-semibold fs-5 text-uppercase" style="letter-spacing: 0.05em;">Contact</a>
+                    </div>
+                    
+                    <!-- Search and Cart Icons -->
+                    <div class="bg-white py-1 px-2 d-flex align-items-center rounded">
+                        <button class="btn btn-link text-dark p-1 me-2" aria-label="Search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="btn btn-link text-dark p-1 me-2" aria-label="Shopping Cart">
+                            <i class="fas fa-shopping-bag fs-5"></i>
+                        </button>
+                        <!-- Mobile Menu Button -->
+                        <button class="btn btn-link text-dark p-1 d-lg-none" id="mobile-menu-button" aria-label="Menu">
+                            <i class="fas fa-bars fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Mobile Navigation Menu -->
+                <div class="d-lg-none border-top border-secondary pt-4 d-none" id="mobile-menu">
+                    <div class="d-flex flex-column">
+                        <a href="#" class="text-dark text-decoration-none fw-medium mb-3 text-uppercase" style="letter-spacing: 0.05em;">Home</a>
+                        <a href="#" class="text-dark text-decoration-none fw-medium mb-3 text-uppercase" style="letter-spacing: 0.05em;">About Us</a>
+                        <a href="#" class="text-dark text-decoration-none fw-medium mb-3 text-uppercase" style="letter-spacing: 0.05em;">Shop</a>
+                        <a href="#" class="text-dark text-decoration-none fw-medium mb-3 text-uppercase" style="letter-spacing: 0.05em;">Occasion</a>
+                        <a href="#" class="text-dark text-decoration-none fw-medium text-uppercase" style="letter-spacing: 0.05em;">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-cream min-vh-100 d-flex align-items-center">
+        <div class="container-fluid px-4 px-lg-5">
+            <div class="row align-items-center g-5">
+                <!-- Left Content -->
+                <div class="col-lg-6">
+                    <div class="text-center text-lg-start">
+                        <h1 class="hero-title font-fredoka-one text-dark mb-5">
+                            Let Your Emotions BLOOM
+                        </h1>
+                        <p class="font-fresca hero-subtitle text-dark mb-4 mb-lg-5">
+                            Floral gifts for love, gratitude, and celebration.
+                        </p>
+                        <!-- CTA Buttons -->
+                        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                            <button class="btn bg-pink-light text-dark fw-bold py-3 px-4 rounded-pill cta-button">
+                                SHOP NOW
+                            </button>
+                            <button class="btn bg-pink-light text-dark fw-bold py-3 px-4 rounded-pill cta-button">
+                                CREATE YOUR OWN BOUQUET
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Image -->
+                <div class="col-lg-6 d-flex justify-content-center">
+                    <img src="/Rectangle 3.svg" 
+                         alt="Beautiful purple and white flower bouquet in white ceramic vase" 
+                         class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-cream pb-5 pt-10">
+        <div class="container">
+            <div class="row align-items-center g-4 g-lg-5">
+                <!-- Image Container -->
+                <div class="col-lg-6">
+                    <div class="rounded overflow-hidden">
+                        <img src="/Rectangle 4.svg" 
+                             alt="Interior of Bloom Boutique flower shop showing colorful flowers and plants" 
+                             class="img-fluid" />
+                    </div>
+                </div>
+                
+                <!-- Text Content -->
+                <div class="col-lg-6 text-center">
+                    <h2 class="fs-1 font-fredoka fw-medium text-decoration-underline text-purple-dark mb-4" style="letter-spacing: 0.05em;">
+                        ABOUT US
+                    </h2>
+                    <p class="fs-1 font-fredoka text-purple-medium fw-medium font-size="24" lh-sm">
+                        "At Bloom Boutique, we are <br />passionate about making your moments bloom. Every bouquet is handcrafted with love and care, bringing beauty and joy to your life's special occasions."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="bg-pink-medium py-5">
+        <div class="container-fluid">
+            <!-- Section Title -->
+            <h2 class="fs-1 font-fredoka fw-medium text-decoration-underline text-purple-dark text-center mb-5" style="letter-spacing: 0.05em;">
+                BLOOMING BESTSELLERS
+            </h2>
+            
+            <!-- Products Grid -->
+            <div class="d-flex gap-4 justify-content-center align-items-center flex-wrap">
+                <!-- Chrysanthemum -->
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div class="bg-white bg-opacity-75 rounded-150 p-3 product-card d-flex flex-column align-items-center justify-content-between">
+                        <div class="d-flex flex-column border border-2 border-brown rounded-150">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img src="/image 3.svg" alt="Pink Chrysanthemum" class="product-image rounded-150" />
+                            </div>
+                            <div class="text-center p-4">
+                                <h3 class="font-fraunces fs-5 fw-medium text-brown-dark mb-1">Chrysanthemum</h3>
+                                <p class="font-fraunces text-brown-dark fw-medium">Rs.399</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn bg-pink-button text-dark fw-bold py-2 px-4 rounded-pill mt-3">
+                        BUY
+                    </button>
+                </div>
+
+                <!-- White Lily -->
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div class="bg-white bg-opacity-75 rounded-150 p-3 product-card d-flex flex-column align-items-center justify-content-between">
+                        <div class="d-flex flex-column border border-2 border-brown rounded-150">
+                            <div class="d-flex align-items-center justify-content-center px-2">
+                                <img src="/image 5.svg" alt="White Lily" class="product-image rounded-150 px-3" />
+                            </div>
+                            <div class="text-center p-4">
+                                <h3 class="font-fraunces fs-5 fw-medium text-brown-dark mb-1">White Lily</h3>
+                                <p class="font-fraunces text-brown-dark fw-medium">Rs.455</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn bg-pink-button text-dark fw-bold py-2 px-4 rounded-pill mt-3">
+                        BUY
+                    </button>
+                </div>
+
+                <!-- Yellow Tulip -->
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div class="bg-white bg-opacity-75 rounded-150 p-3 product-card d-flex flex-column align-items-center justify-content-between">
+                        <div class="d-flex flex-column border border-2 border-brown rounded-150">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img src="/image 6.svg" alt="Yellow Tulip" class="product-image rounded-150 px-2" />
+                            </div>
+                            <div class="text-center p-4">
+                                <h3 class="font-fraunces fs-5 fw-medium text-brown-dark mb-1">Yellow Tulip</h3>
+                                <p class="font-fraunces text-brown-dark fw-medium">Rs.449</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn bg-pink-button text-dark fw-bold py-2 px-4 rounded-pill mt-3">
+                        BUY
+                    </button>
+                </div>
+
+                <!-- Red Roses -->
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div class="bg-white bg-opacity-75 rounded-150 p-3 product-card d-flex flex-column align-items-center justify-content-between">
+                        <div class="d-flex flex-column border border-2 border-brown rounded-150">
+                            <div class="d-flex align-items-center justify-content-center mt-2">
+                                <img src="/image 7.svg" alt="Red Roses" class="product-image rounded-150" />
+                            </div>
+                            <div class="text-center p-4">
+                                <h3 class="font-fraunces fs-5 fw-medium text-brown-dark mb-1">Red Roses</h3>
+                                <p class="font-fraunces text-brown-dark fw-medium">Rs.550</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn bg-pink-button text-dark fw-bold py-2 px-4 rounded-pill mt-3">
+                        BUY
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Occasions Section -->
+    <section class="bg-cream py-5">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="text-center mb-5">
+                <h2 class="fs-1 font-fredoka fw-medium text-decoration-underline text-purple-dark" style="letter-spacing: 0.05em;">
+                    FLOWERS FOR EVERY OCCASION
+                </h2>
+            </div>
+            
+            <!-- Occasions Grid -->
+            <div class="row g-4 py-3">
+                <!-- Happy Birthday -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="occasion-card overflow-hidden">
+                        <img src="/Rectangle 8.svg" alt="Pink roses for Happy Birthday" class="img-fluid occasion-image w-100" />
+                    </div>
+                </div>
+                
+                <!-- Wedding Congratulations -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="occasion-card overflow-hidden">
+                        <img src="/Rectangle 10.svg" alt="Purple and white flowers for wedding" class="img-fluid occasion-image w-100" />
+                    </div>
+                </div>
+                
+                <!-- Graduation -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="occasion-card overflow-hidden">
+                        <img src="/Rectangle 11.svg" alt="Peach flowers with teddy bear for graduation" class="img-fluid occasion-image w-100" />
+                    </div>
+                </div>
+                
+                <!-- Wedding Anniversary -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="occasion-card overflow-hidden">
+                        <img src="/Rectangle 9.svg" alt="Pink flowers for wedding anniversary" class="img-fluid occasion-image w-100" />
+                    </div>
+                </div>
+                
+                <!-- General Bouquet -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="occasion-card overflow-hidden">
+                        <img src="/Rectangle 12.svg" alt="Elegant pink roses bouquet" class="img-fluid occasion-image w-100" />
+                    </div>
+                </div>
+                
+                <!-- Valentine's Day -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="occasion-card overflow-hidden">
+                        <img src="/Rectangle 13 (1).svg" alt="Pink tulips for Valentine's Day" class="img-fluid occasion-image w-100" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="bg-cream">
+        <div class="container">
+            <div class="text-center pb-5">
+                <div class="text-center mb-5">
+                    <h2 class="fs-1 font-fredoka fw-medium text-decoration-underline text-purple-dark" style="letter-spacing: 0.05em;">
+                        BLOOMING REVIEWS
+                    </h2>
+                </div>
+                
+                <!-- Reviews Grid -->
+                <div class="row g-4">
+                    <!-- Review 1 -->
+                    <div class="col-md-4">
+                        <div class="bg-rose-review p-4 rounded shadow-sm">
+                            <p class="font-italianno text-brown-dark fs-4 text-center lh-base mb-3">
+                                "Timely delivery, beautiful packaging, and fresh flowers - perfect! My surprise gift was a huge success, all thanks to you!"
+                            </p>
+                            <p class="font-italianno text-brown-medium fs-4 text-center">
+                                - Emma Collins
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Review 2 -->
+                    <div class="col-md-4">
+                        <div class="bg-rose-review p-4 rounded shadow-sm">
+                            <p class="font-italianno text-brown-dark fs-4 text-center lh-base mb-3">
+                                "Bloom Boutique is now my go-to for every occasion! I ordered from abroad and it was delivered exactly as promised!"
+                            </p>
+                            <p class="font-italianno text-brown-medium fs-4 text-center">
+                                - Meera Kapoor
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Review 3 -->
+                    <div class="col-md-4">
+                        <div class="bg-rose-review p-4 rounded shadow-sm">
+                            <p class="font-italianno text-brown-dark fs-4 text-center lh-base mb-3">
+                                "The fragrance, the colors, the care - everything was perfect. They even added a handwritten note. Such a lovely gesture."
+                            </p>
+                            <p class="font-italianno text-brown-medium fs-4 text-center">
+                                - Teo Choi
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-pink-footer py-5">
+        <div class="container-fluid px-5">
+            <div class="d-flex justify-content-center align-items-center gap-5 flex-wrap">
+                <!-- Company Info -->
+                <div class="text-center text-lg-start">
+                    <div class="d-flex justify-content-center justify-content-lg-start mb-4">
+                        <img src="/image 2.svg" alt="Bloom Boutique Logo" style="height: 80px;" />
+                    </div>
+                    <div class="text-brown-light">
+                        <div class="d-flex align-items-start mb-2">
+                            <svg class="me-2 mt-1 text-danger" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg>
+                            <span class="fs-5">123 Floral Avenue,<br>Mumbai</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <svg class="me-2 text-danger" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                            </svg>
+                            <span class="fs-5">+92 10-1234-5678</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <svg class="me-2 text-danger" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                            </svg>
+                            <span class="fs-5">Mon-Sat: 9AM-8PM</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="divider-line d-none d-lg-block"></div>
+                
+                <!-- Quick Links -->
+                <div class="text-center">
+                    <h4 class="fs-3 fw-semibold text-brown-light mb-3">Quick Links</h4>
+                    <nav class="d-flex flex-column gap-2">
+                        <a href="#" class="text-brown-light text-decoration-none fs-5">Home</a>
+                        <a href="#" class="text-brown-light text-decoration-none fs-5">About Us</a>
+                        <a href="#" class="text-brown-light text-decoration-none fs-5">Shop</a>
+                        <a href="#" class="text-brown-light text-decoration-none fs-5">Occasion</a>
+                    </nav>
+                </div>
+                
+                <div class="divider-line d-none d-lg-block"></div>
+                
+                <!-- Contact Form -->
+                <div class="text-center">
+                    <h4 class="fs-3 fw-semibold text-brown-light mb-4">CONTACT US</h4>
+                    <form class="d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center gap-3">
+                            <label class="text-brown-footer fw-bold fs-5 text-nowrap">NAME :</label>
+                            <input type="text" class="form-control bg-pink-input border-0" style="height: 25px; margin-left: 1.5rem;" />
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <label class="text-brown-footer fw-bold fs-5 text-nowrap">EMAIL-ID :</label>
+                            <input type="email" class="form-control bg-pink-input border-0" style="height: 25px;" />
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <label class="text-brown-footer fw-bold fs-5 text-nowrap">MESSAGE :</label>
+                            <input type="text" class="form-control bg-pink-input border-0" style="height: 25px;" />
+                        </div>
+                    </form>
+                    <button type="submit" class="btn bg-gray-button text-brown-button fw-bold fs-5 py-2 px-4 rounded-pill mt-4">
+                        SEND
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright -->
+    <div class="bg-brown-footer text-white text-center py-3">
+        <p class="mb-0 fw-bold fs-5">&copy; 2025 Bloom Boutique. All rights reserved.</p>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = this.querySelector('i');
+            
+            if (mobileMenu.classList.contains('d-none')) {
+                mobileMenu.classList.remove('d-none');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                mobileMenu.classList.add('d-none');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>
